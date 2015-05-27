@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Anonymart - Sell Anything, Trustless and Anonymously</title>
+		<meta property="og:title" content="Anonymart - Sell Anything, Trustless and Anonymously" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="http://anonymart.github.io/logo.jpg" />
+		<meta property="og:url" content="http://anonymart.github.io" />
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="/agency.css" rel="stylesheet" type="text/css">
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	    <style>a{color:#31708f}</style>
+	</head>
+	<body>
+        <div class="container" id="screenshots">
+        	<h2>Installation</h2>
+        	<p>I tried to keep the installation simple, but don't worry if you get stuck. Come by <a href="http://reddit.com/r/anonymart">/r/anonymart</a> and we'll try and help.</p>
+        	<h3>Hosting</h3>
+        	<p>The first step is to get a server that runs Debian 7. The following hosts offer Debian 7 boxes and accept bitcoin.</p>
+        	<ul>
+        		<li><a href="http://vultr.com">Vultr</a></li>
+        		<li><a href="http://bithost.io">BitHost</a></li>
+        		<li><a href="http://www.qhoster.com/linux-vps.html">Qhoster</a></li>
+        	</ul>
+        	<h3>Accessing your machine over Tor</h3>
+        	<p>Some hosts (such as Vultr) offer a web console to manage your server. Other hosts requre you to use SSH to access your server. Make sure you use SSH over tor. Using SSH over tor properly depends on which OS you use (Mac/Windows/Linux) so I won't include instructions here.</p>
+        	<h3>Installing Anonymart</h3>
+        	<p>Once you've connected to your server, run the following commands in order, one line at a time.</p>
+        	<pre>apt-get install git -y
+git clone https://github.com/anonymart/anonymart.git /var/www/anonymart
+chmod u+rwx /var/www/anonymart/bin/*
+chmod u+rwx /var/www/anonymart/bin/init.sh</pre>
+        	<p>Wait while anonymart installs. The very last line should be your onion url. Put that link in your tor browser and you should be greeted by a site setup form. To login into your Anonymart, point your Tor browser to yoursite.onion/login.</p>
+        </div>
+	</body>
+</html>
